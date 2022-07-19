@@ -7,8 +7,11 @@ cmd창에
     $ yarn start
   
 react 프로젝트 시작되면서 웹페이지가 열린다.
+
 변수 선언
+
 정적 변수 - const
+
 동적 변수 - let (var 대신 let을 사용한다.)
 
 <h2>JSX 문법</h2>
