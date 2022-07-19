@@ -6,8 +6,14 @@
 <h2>JSX 문법</h2>
 react에서 import는 여러 파일을 불러올 수 있다.
 
+함수형 컴포넌트
 ```javascript
 function App() {
-  return ( ... );
+  return (
+  <div>
+  
+  </div>
+  );
 }
 ```
+
