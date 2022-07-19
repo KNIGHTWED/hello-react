@@ -1,5 +1,7 @@
 <h1>Hello React!</h1>
+
 cmd창에
+
 
   $ cd 프로젝트 폴더 이름
   $ yarn start
