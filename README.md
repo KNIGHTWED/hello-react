@@ -17,4 +17,4 @@ function App() {
   );
 }
 ```
-항상 최상위에는 <div>와 같은 태그로 감싸져 있어야한다.(<fragment></fragment>, <></> 도 가능)
+항상 최상위에는 <div></div>와 같은 태그로 감싸져 있어야한다.(<fragment></fragment>, <></> 도 가능)
