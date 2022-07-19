@@ -5,13 +5,15 @@ class EventPractice extends Component {
     username: '',
     message: ''
   };
+
   // constructor 함수에서 함수 바인딩
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
-  // onClick과 onChange에 들어갈 함수를 바깥으로 
+
+  // onClick과 onChange, onKeyPress에 들어갈 함수를 바깥으로 
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
