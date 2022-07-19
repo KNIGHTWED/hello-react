@@ -3,8 +3,8 @@
 cmd창에
 
 
-  $ cd 프로젝트 폴더 이름
-  $ yarn start
+    $ cd 프로젝트 폴더 이름
+    $ yarn start
   
 react 프로젝트 시작되면서 웹페이지가 열린다.
 변수 선언
