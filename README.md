@@ -8,6 +8,6 @@ react에서 import는 여러 파일을 불러올 수 있다.
 
 ```
 function App() {
-return ( ... );
+  return ( ... );
 }
 ```
