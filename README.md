@@ -31,7 +31,9 @@ function App() {
 
 <h2>Ref</h2>
 
-`<input ref = {(ref) => this.input=ref}></input>`
+``` javascript
+<input ref = {(ref) => this.input=ref}></input>
+```
 
 Ref를 사용해야 할 때
 포커스, 텍스트 선택영역, 혹은 미디어의 재생을 관리할 때.
