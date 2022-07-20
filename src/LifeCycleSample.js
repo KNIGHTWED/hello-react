@@ -61,9 +61,10 @@ class LifeCycleSample extends Component {
     const style = {
       color: this.props.color
     };
+    // this.props.missing.value는 없기때문에 에러가 발생한다. ErrorBoundary에서 에러가 발생했음을 알린다.
     return (
       <div>
-        {/* {this.props.missing.value} */}
+        {this.props.missing.value}
         <h1 style ={style} ref={ref => this.myRef=ref}>{this.state.number}</h1>
         <p>color: {this.state.color}</p>
         <button onClick={this.handleClick}>더하기</button>

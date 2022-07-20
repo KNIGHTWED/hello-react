@@ -109,4 +109,6 @@ componentDidMount: 컴포넌트를 만들고, 첫 렌더링을 마친 후 실행
 
 ## Hooks
 
-
+Hook에는 여러종류가 있다.
+`useState`, `useEffect`, `useReducer`, `useMemo`, `useCallback`, `useRef`, `CustomHooks` 외에 다른 Hook들도 있다.
+Hooks는 리액트 16.8부터 도입된 기능이다. 기존의 함수형 컴포넌트에서 할 수 없던 다양한 작업을 가능케 해준다.
