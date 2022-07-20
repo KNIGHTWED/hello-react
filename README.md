@@ -1,4 +1,4 @@
-<h1>Hello React!</h1>
+# Hello React!
 
 cmd창에
 
@@ -13,7 +13,7 @@ react 프로젝트 시작되면서 웹페이지가 열린다.
 정적 변수 - const<br/>
 동적 변수 - let (var 대신 let을 사용한다.)
 <br/>
-<h2>JSX 문법</h2>
+## JSX 문법
 react에서 import는 여러 파일을 불러올 수 있다.
 
 
@@ -29,7 +29,7 @@ function App() {
 ```
 항상 최상위에는 `<div></div>`와 같은 태그로 감싸져 있어야한다.(`<fragment></fragment>`, `<></>` 도 가능)
 <br/>
-<h2>Ref</h2>
+## Ref
 
 ``` javascript
 <input ref = {(ref) => this.input=ref}></input>
@@ -42,7 +42,8 @@ Ref를 사용해야 할 때
 (React Ref와 DOM)
 
 <br/>
-<h2>Map 함수</h2>
+
+## Map 함수
 
 `arr.map(callback, [thisArg])`
 
@@ -57,7 +58,8 @@ concat도 가능하다.
 filter 함수를 사용하여 배열에서 특정 조건을 만족하는 원소들만 남길 수 있다.
 
 <br/>
-<h2>컴포넌트의 라이프사이클 메서드</h2>
+
+## 컴포넌트의 라이프사이클 메서드
 
 getDerivedStateFromProps
 ```javascript
@@ -78,7 +80,7 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
   }
 }
 ```
-componentDidUpdate: 컴포넌트 업데이트 작업이 끝난 후 호출하는 메서드
+componentDidUpdate: 컴포넌트 업데이트 작업이 끝난 후 호출하는 메서드 **컴포넌트의 업데이트 성능을 결정하는 중요한 요소**
 ```javascript
 componentDidUpdate(prevProps, prevState, snapshot) { ... }
 ```
@@ -97,4 +99,14 @@ componentDidCatch(error, info){
 ```
 `error`는 에러의 종류, `info`는 에러 코드의 위치와 같은 정보를 줍니다.
 componentDidMount: 컴포넌트를 만들고, 첫 렌더링을 마친 후 실행
+
+### 에러 잡아내기
+에러를 콘솔에서 출력하면 개발자는 인지할 수 있지만
+일반 사용자는 아무것도 없는 흰 페이지만 보인다.
+에러가 발생했다고 알려줘야 한다.
+`ErrorBoundary.js`를 보면 componentDidCatch 메서드에 error 가 true이면 '에러가 발생했습니다'라는 문구를 띄우게 되어있다.
+
+
+## Hooks
+
 
