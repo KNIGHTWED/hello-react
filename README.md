@@ -12,7 +12,7 @@ react 프로젝트 시작되면서 웹페이지가 열린다.
 
 정적 변수 - const<br/>
 동적 변수 - let (var 대신 let을 사용한다.)
-
+<br/>
 <h2>JSX 문법</h2>
 react에서 import는 여러 파일을 불러올 수 있다.
 
@@ -28,7 +28,7 @@ function App() {
 }
 ```
 항상 최상위에는 `<div></div>`와 같은 태그로 감싸져 있어야한다.(`<fragment></fragment>`, `<></>` 도 가능)
-
+<br/>
 <h2>Ref</h2>
 
 ``` javascript
@@ -41,7 +41,7 @@ Ref를 사용해야 할 때
 서드 파티 DOM 라이브러리를 React와 같이 사용할 때.
 (React Ref와 DOM)
 
-
+<br/>
 <h2>Map 함수</h2>
 
 `arr.map(callback, [thisArg])`
@@ -56,5 +56,45 @@ concat도 가능하다.
 데이터 제거
 filter 함수를 사용하여 배열에서 특정 조건을 만족하는 원소들만 남길 수 있다.
 
-
+<br/>
 <h2>컴포넌트의 라이프사이클 메서드</h2>
+
+getDerivedStateFromProps
+```javascript
+static getDerivedStateFromProps(nextProps, prevState){
+  if(nextProps.value !== prevState.value) { // 조건에 따라 특정 값 동기화
+    return { value: nextProps.value};
+  }
+  return null; // state를 변경할 필요 없으면 null 반환
+}
+```
+shouldComponentUpdate
+getSnapshotBeforeUpdate: render에서 만들어진 결과물이 브라우저에 실제로 반영되기 직전에 호출
+```javascript
+getSnapshotBeforeUpdate(prevProps, prevState) {
+  if(prevState.array !== this.state.array) {
+    const{ scrollTop, scrollHeight } = this.list
+    return { scrollTop, scrollHeight };
+  }
+}
+```
+componentDidUpdate: 컴포넌트 업데이트 작업이 끝난 후 호출하는 메서드
+```javascript
+componentDidUpdate(prevProps, prevState, snapshot) { ... }
+```
+componentWillUnmount: 컴포넌트가 웹 브라우저상에서 사라지기 전에 호출하는 메서드
+```javascript
+componenetWillUnmount() { ... }
+```
+componentDidCatch: 컴포넌트 렌더링 도중 에러가 발생했을 때 애플리케이션이 먹통이 되지 않고 오류 UI를 보여 줄 수 잇게 해준다.
+```javascript
+componentDidCatch(error, info){
+  this.setState({
+    error: true
+  });
+  console.log({errer, info});
+}
+```
+`error`는 에러의 종류, `info`는 에러 코드의 위치와 같은 정보를 줍니다.
+componentDidMount: 컴포넌트를 만들고, 첫 렌더링을 마친 후 실행
+
